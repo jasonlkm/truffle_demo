@@ -23,7 +23,6 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 // const fs = require('fs');
 const mnemonic = require("./secrets.json").mnemonic;
 
-const mnemonicPhrase = "improve valley butter lumber talent bleak require clock because pact ask country"; 
 
 module.exports = {
   /**
