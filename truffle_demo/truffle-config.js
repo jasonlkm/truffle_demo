@@ -25,8 +25,6 @@ const mnemonic = require("./secrets.json").mnemonic;
 
 const mnemonicPhrase = "improve valley butter lumber talent bleak require clock because pact ask country"; 
 
-const privateKeys = Buffer.from('cf3221fa7c6e770e06db6428cd5c0542a9a0a194385abcf80c73dd0aad5daebe', 'hex');
-
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -63,7 +61,7 @@ module.exports = {
     // NB: It's important to wrap the provider as a function.
     rinkeby : {
       provider: () => new 
-      HDWalletProvider('cf3221fa7c6e770e06db6428cd5c0542a9a0a194385abcf80c73dd0aad5daebe', `https://speedy-nodes-nyc.moralis.io/ae052d5f0a1adcd55f274d5b/eth/rinkeby`)
+      HDWalletProvider(mnemonic, `https://speedy-nodes-nyc.moralis.io/ae052d5f0a1adcd55f274d5b/eth/rinkeby`)
       ,
       network_id: 4,       // rinkeby's id
       gas: 5500000,        // Rinkeby has a lower block limit than mainnet
